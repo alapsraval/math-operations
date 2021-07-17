@@ -23,19 +23,10 @@ function countingValleys(steps, path) {
     let currentPosition = 0;
 
     for (let i = 0; i < steps; i++) {
-        console.log(path[i]);
-
         path[i] === 'U' ? currentPosition++ : currentPosition--;
-
-        console.log(`currentPosition: ${currentPosition}`);
-
         if (currentPosition === -1 && path[i] === 'D') {
             totalValleys++;
         }
-        console.log(`totalValleys:${totalValleys}`);
-
-
-
     }
     return totalValleys;
 }
